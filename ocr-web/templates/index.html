@@ -1,0 +1,28 @@
+<!doctype html>
+<title>ID Card</title>
+<head>
+    <style>
+  .topright {
+  position: absolute;
+  top: 12px;
+  right: 26px;
+  font-size: 18px;
+}
+    </style>
+</head>
+<body>
+<a class="topright" href="/">Home</a>
+<h1><div style="background-color: #ff7f50; text-align: center; padding: 10px;font-size:50px;color:white;font-family:Georgia;margin:60px">Card to Text</div></h1>
+<form method="post" enctype="multipart/form-data" style="margin-left:60px">
+    <input type="radio" id="thaiid" name="cardType" value="thaiid" checked>บัตรประชาชน
+    <input type="radio" id="alien" name="cardType" value="alien">บัตรต่างด้าว
+    <input type="radio" id="passport" name="cardType" value="passport">พาสปอร์ต
+
+    <p><input type=file name=image_upload><input type=submit value=Upload></p>
+    <div style="padding-top: 20px">
+            {% if result %}
+                <p style="font-size: 16px; padding-left: 40px; padding-right: 40px">{{ result }}</p>
+            {% endif %}
+    </div>
+</form>
+</body>

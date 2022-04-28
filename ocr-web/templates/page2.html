@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+input[type="radio"]:checked:after {
+    background-color: red;
+}
+.topright {
+  position: absolute;
+  top: 12px;
+  right: 26px;
+  font-size: 18px;}
+    </style>
+    <meta charset="UTF-8">
+    <title>ID Card</title>
+    <style>
+body {
+  background-image: url('static/background2.jpeg');
+}
+</style>
+</head>
+<body>
+<a class="topright" href="/">Home</a>
+<h1><div style="background-color:lightslategray;text-align: center;font-size:50px;color:white;font-family:Georgia;padding:10px;margin:60px">Card to Text</div>
+    <h4 style="margin-left:60px;color:black">Select a card</h4>
+<form method="post" enctype="multipart/form-data" style="margin-left:60px;font-family:Georgia">
+    <input type="radio" id="thaiid" name="cardType" value="thaiid" checked>ID Card
+    <input type="radio" id="alien" name="cardType" value="alien">Alien Card
+    <input type="radio" id="passport" name="cardType" value="passport">Passport
+    <br>
+    <br>
+    <p><input type=file name=image_upload><input type=submit value=Submit></p>
+
+</form>
+    {%if result %}
+    <br>
+    <center><img src="static/input.jpg" alt="Input" width="400" height="280"></center>
+    <br>
+    <center><h4 style="padding: 15px;color:navy">{{ result|safe }}</h4></center>
+    <br>
+
+    {% endif %}
+</body>
+</html>

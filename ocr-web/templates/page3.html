@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+  .topright {
+  position: absolute;
+  top: 12px;
+  right: 26px;
+  font-size: 18px;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Form to Text</title>
+
+</head>
+<body>
+<a class="topright" href="/">Home</a>
+<h1><div style="background-color:plum;text-align: center;font-size:50px;color:white;font-family:Georgia;padding:10px;margin:60px">Form to Text</div>
+<a style="font-size:17px;margin-left:60px" href="https://drive.google.com/file/d/1TQ0qaeqijNASokw-dLqCnmmO_6Mc-6_y/view?usp=sharing" target="_blank">View Sample Form</a>
+    <form method="post" enctype="multipart/form-data" style="margin-left:60px;font-family:Georgia">
+    <p><input type=file name=image_upload><input type=submit value=Submit></p>
+
+</form>
+
+    {%if result %}
+    <br>
+    <center><h5 style="padding: 10px;color:grey">{{ result|safe }}</h5></center>
+    <br>
+
+    {% endif %}
+</body>
+</html>

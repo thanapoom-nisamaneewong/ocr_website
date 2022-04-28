@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  prod:
+    image: ocr-web/ocr-web:latest-prod
+    working_dir: /production/ocr-web
+    entrypoint: uvicorn main:app --reload --port 80 --host 0.0.0.0
+    build:
+      target: production
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - ././production
+    ports:
+      - 80:80
