@@ -23,6 +23,7 @@ Jinja2==3.0.3
 scikit-image==0.18.1
 pybase64==1.2.1
 pdf2image
+poppler-utils
 
 # .env support
 python-dotenv==0.14.0
