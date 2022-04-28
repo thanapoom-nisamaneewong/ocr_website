@@ -23,7 +23,7 @@ def cleanDataId(x):
 def readText(x, lang):
     #pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
     #pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
-    pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+    #pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
     #pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/5.1.0/bin/tesseract'
 
     TH_config = ('-l tha --psm 6')
