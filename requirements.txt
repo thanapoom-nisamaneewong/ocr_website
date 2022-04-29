@@ -24,6 +24,7 @@ scikit-image==0.18.1
 pybase64==1.2.1
 pdf2image
 poppler-utils
+python-dateutil
 
 # .env support
 python-dotenv==0.14.0
