@@ -49,7 +49,7 @@ def readId(x, lang):
     #pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
     #pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
     #pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/5.0.1/bin/tesseract'
-
+    pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
     Num_config = ('--psm 13 --oem 3 -c tessedit_char_whitelist=0123456789')
 
